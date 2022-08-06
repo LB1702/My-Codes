@@ -1,0 +1,225 @@
+*, ::before ::after {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html {
+height : 100%;
+
+}
+
+body {
+    background : #333;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image:url('/image/FDroger.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden ;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ff16c5;
+}
+.button3:hover {
+    background-color: #ff16c5;
+  color: white;
+}
+
+
+.buttonAdd{
+    margin-left: 47%;
+    border-radius: 25px;
+    position: relative;
+    z-index: auto;
+}
+
+.vl {
+    border-left: 6px solid gray;
+    margin-top: 25px;
+    margin-left: 50%;
+    height: 100%;
+  }
+
+
+
+.post{
+    border-radius: 5%;
+    margin-top: 15%;
+    background-color: #eeeeee;
+    height: 200px;
+    width: 45%;
+    left: 1%;
+    position: absolute;
+    top: 123px;
+    z-index: -1;
+    border: 1px solid black;
+    /* margin: 0 10px; */
+    visibility: visible;
+}
+
+.postImageProfile{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+.postHolder{
+    margin-left: 12%;
+    margin-top:-7%;
+}
+
+.categoryLabel{
+    position: relative;
+    padding-left: 75%;
+    
+}
+
+.postCategory{
+    padding-left: 3%;
+    margin-top: 1%;
+}
+
+.postMessage{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: -7%;
+    margin-left: 15%;
+}
+
+table{
+    margin-top: 1%;
+    margin-left: 1%;
+text-align: center;
+border-radius: 20px;
+background-color: rgba(0,0,0,0.2);
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bolder;
+font-size: 24px;
+}
+
+.sep{
+    border-right: 2px solid white;
+}
+
+td{
+    font-size:medium;
+}
+
+.seeMoreLink{
+    /* top: 123px; */
+    /* margin-left:80%;
+    bottom: 25%; */
+    /* color: red; */
+}
+
+.postSingle{
+    border-radius: 5%;
+    margin-top:5%;
+    background-color: #eeeeee;
+    height: 400px;
+    width: 100%;
+    left: 1%;
+    position: absolute;
+    top: 123px;
+    z-index: -1;
+    border: 1px solid black;
+    /* margin: 0 10px; */
+    visibility: visible;
+}
+
+.postImageProfileSingle{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-top: 3%;
+    margin-left: 1%;
+
+}
+
+.postHolderSingle{
+    position: absolute;
+    margin-left: 10%;
+    margin-top:-3%;
+}
+
+
+
+.postCategorySingle{
+    padding-left: 50%;
+    margin-top: 7%;
+}
+
+.postMessageSingle{
+    overflow:visible;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+
+.categorySingle{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: -7%;
+    margin-left: 15%;
+}
+
+.comment{
+    border-radius: 4%;
+    position: absolute;
+    margin-top:40%;
+    margin-left: 5%;
+    background-color: #eeeeee;
+    height: 150px;
+    width: 90%;
+    left: 1%;
+    position: absolute;
+    top: 123px;
+    z-index: -1;
+    border: 1px solid black;
+    /* margin: 0 10px; */
+    visibility: visible;
+}
+
+.insertComment{
+    border-radius: 4%;
+    position: relative;
+    margin-top:65%;
+    margin-left: 5%;
+    background-color: #eeeeee;
+    height: 100px;
+    width:90%;
+    left: 1%;
+    position: absolute;
+    top: 12px;
+    z-index: -1;
+    border: 1px solid black;
+    /* margin: 0 10px; */
+    visibility: visible;
+}
+
+.commentSection{
+    position: absolute;
+    width: 90%;
+}
+.submitComment{
+    margin-left: 90%;
+}

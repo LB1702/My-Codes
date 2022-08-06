@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page de discussion</title>
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/discussion.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/chatbox.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/icon/grandline.png">
+    <script src="script.js"></script>
+</head>
+<style>
+    body {
+        background-image: url('/image/crocodile.gif');
+        background-size: cover;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav id="menufond">
+        <ul id="menu">
+          <li id="Acceuil"><a href="/index" >Acceuil</a></li>
+          <li id="login"><a href="/login">Login</a></li>
+          <li id="contact"><a href="/contact">Contact</a></li>
+          <li id="profile" value="{{.Session.Name}}"><a href="/profile">Profile</a></li>
+          <li id="register"><a href="/signin">Sign In</a></li>  
+        </ul>
+    </nav>
+    <main>
+        <h3 style="text-align: center;">Bienvenue dans la page des Discussions </h3>
+        <button class="buttonAdd" onclick="SpanPostCreation();">Add a Post!</button>
+        <hr>
+        <div class="addPost" id="postCreation">
+            <input type="image" id="exitPost" class="exitPost" src="image/exitButton.png" onclick="ClearSpanPostCreation()">
+            <form action="">
+            <div class="vuemessage" type="text">
+                 <input type="text" class="message" id="content" name="content"> 
+            </div>
+            <div class="sendmessage">
+                <label for="avatar">You can charge up to 1 media(PNG ou JPEG)</label><br><br>
+                    <input type="file"
+                    id="postImage" name="postImage" onchange="showImage(this);"
+                    accept="image/png, image/jpeg"> <br>
+                    <input type="text" style="visibility: hidden;" id="imageConverted" name="imageConverted" value=""></h3> <br>
+                    <img id="blah" src="#" class="image" onchange="convertImageOnLoad();"/><br>
+                    <button type="submit" class="buttonPost" onclick="thankYouPost();">
+                      Post
+                    </button>
+                </form>
+                <!-- <button onmouseover="convertImageOnLoad();">Check image!</button> -->
+            </div>
+        </div>
+        </div>
+    </main>
+    <aside>
+
+    </aside>
+    <div class="success" id="success">
+        <h1>Thank you :)!</h1>
+    </div>
+    <input type="text" style="visibility: hidden;" id="comments" name="comments" value="{{range .Comments}}
+                                                                                        {{.}}
+                                                                                        {{end}}">
+</h3> <br>
+<hr style="padding-top: 10%;">
+    <!-- POST INSERT SPACE -->
+    {{range .Posts}}
+    <div class="post" id="post">
+        <img src="image/denied.jpg" class="postImageProfile">
+        <h4 class="postHolder" id="postHolder">Yassine Dehhani</h4>
+        <div class="category">
+        <label for="postCategory" class="categoryLabel">Category: </label>
+        <h5 class="postCategory" id="postCategory">History</h5>
+        </div>
+        <hr>
+        <h4 class="postMessage" id="postMessage">
+                                                 {{.Content}}
+                                                
+        </h4>
+            <hr style="margin-top: 8%;">
+            <!-- <div class="interactions"> -->
+                <table>
+                <tbody >
+                    <tr>
+                        <td class="sep">            <label for="nbComments">Comments: </label>
+                            <span id="nbComments">135</span></td>
+                        <td class="sep">            <label for="likes">Likes: </label>
+                            <span id="likes">{{.Likes}}</span></td>
+                        <td class="sep">            <label for="dislikes">Dislikes: </label>
+                            <span id="dislikes">{{.Dislikes}}</span></td>
+                        <td>
+                <a href="url" class="seeMoreLink" id="seeMoreLink">Click to see more..</a>
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+    </div>
+    {{end}}
+    <!-- END POST INSERT  -->
+
+
+    <script>
+        init()
+        assignIdToPostsAndRefs()
+        tabulatePosts()
+        // let comments = "{{.}}"
+        //console.log(comments) 
+      </script>
+</body>
